@@ -91,7 +91,7 @@ cargo install eva
 if [ "$OS" == "mac" ]; then
 	brew install exa
 elif [ "$OS" == "linux" ]; then
-	sudo apt-get install exa
+	cargo install exa
 fi
 
 # Fd
@@ -99,7 +99,7 @@ fi
 if [ "$OS" == "mac" ]; then
 	brew install fd
 elif [ "$OS" == "linux" ]; then
-	sudo apt-get install fd-find
+	cargo install fd-find
 fi
 
 # Fzf
