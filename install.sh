@@ -1,12 +1,21 @@
-# Install Brew (Mac)
+# Set Variables
 if [ "$(uname)" == "Darwin"]; then
+	OS=mac
+	DISTRO=darwin-x64
+elif ["$(expr substr $(uname -s) 1 5)" == "Linux"]; then
+	OS=linux
+	DISTRO=linux-x64
+fi
+
+# Install Brew (Mac)
+if [ $OS == mac ]; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)":	
 fi
 
 # Update package manager
-if [ "$(uname)" == "Darwin"]; then
+if [ $OS == mac ]; then
        brew update && brew upgrade
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+elif [ $OS == linux ]; then
        sudo apt-get update && sudo apt-get upgrade
 fi
 
@@ -16,7 +25,7 @@ cp .vimrc ~/.vimrc
 cp .tmux.conf ~/.tmux.conf
 
 # Build Tools (linux)
-if ["$(expr substr $(uname -s) 1 5)" == "Linux"]; then
+if [ $OS == linux ]; then
 	sudo apt install -y build-essential cmake
 fi
 
@@ -24,9 +33,9 @@ fi
 vim -c :PlugInstall
 
 # TMUX
-if [ "$(uname)" == "Darwin"]; then
+if [ $OS == mac ]; then
 	brew install tmux
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+elif [ $OS == linux ]; then
         sudo apt-get install -y tmux
 fi
 
@@ -39,11 +48,7 @@ cargo install gitui
 
 # NODE
 NODE_VERSION=v16.14.0
-if [ "$(uname)" == "Darwin"]; then
-        DISTRO=darwin-x64
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-        DISTRO=linux-x64
-fi
+
 # Download and unzip binary
 sudo mkdir -p /usr/local/lib/nodejs
 curl -O "https://nodejs.org/dist/$NODE_VERSION/node-$NODE_VERSION-$DISTRO.tar.xz"
