@@ -79,4 +79,38 @@ elif [ $OS == linux]
 fi
 
 # DUST
+# More intuitive version of du
 cargo install du-dust
+
+# Eva
+# Calculator REPL like bc(1) 
+cargo install eva
+
+# Exa
+# Modern replacement for ls
+if [ $OS == mac ]; then
+	brew install exa
+elif [ $OS == linux ]
+	sudo apt-get install exa
+fi
+
+# Fd
+# Simple, fast, and user-friendly alternative to 'find'
+if [ $OS == mac]; then
+	brew install fd
+elif [ $OS == linux ]
+	sudo apt-get install fd-find
+fi
+
+# Fzf
+# Fuzzy search
+if [ $OS == mac ]; then
+	brew install fzf
+	$(brew --prefix)/opt/fzf/install
+elif [ $OS == linux ]
+	sudo apt-get install fzf
+fi
+
+# JLess
+# Json parser
+cargo install jless
