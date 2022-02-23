@@ -67,3 +67,11 @@ elif [ $OS == linux ]
 	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 	sudo apt install gh
 fi
+gh auth login
+
+# BAT
+if [ $OS == mac]; then
+	brew install bat
+elif [ $OS == linux]
+	sudo apt-get install bat
+fi
