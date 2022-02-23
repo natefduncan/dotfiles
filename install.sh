@@ -74,4 +74,6 @@ if [ $OS == mac]; then
 	brew install bat
 elif [ $OS == linux]
 	sudo apt-get install bat
+	mkdir -p ~/.local/bin
+	ln -s /usr/bin/batcat ~/.local/bin/bat
 fi
