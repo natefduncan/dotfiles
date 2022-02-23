@@ -113,4 +113,4 @@ fi
 
 # JLess
 # Json parser
-cargo install jess
+cargo install jless
