@@ -62,7 +62,7 @@ echo "export PATH=\"/usr/local/lib/nodejs/node-$NODE_VERSION-$DISTRO/bin:\$PATH:
 # GitHub CLI
 if [ "$OS" == "mac" ]; then
 	brew install gh
-elif [ "$OS" == "linux" ]
+elif [ "$OS" == "linux" ]; 
 	curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 	sudo apt install gh
@@ -72,7 +72,7 @@ gh auth login
 # BAT
 if [ "$OS" == "mac" ]; then
 	brew install bat
-elif [ "$OS" == "linux" ]
+elif [ "$OS" == "linux" ]; 
 	sudo apt-get install bat
 	mkdir -p ~/.local/bin
 	ln -s /usr/bin/batcat ~/.local/bin/bat
@@ -90,7 +90,7 @@ cargo install eva
 # Modern replacement for ls
 if [ "$OS" == "mac" ]; then
 	brew install exa
-elif [ "$OS" == "linux" ]
+elif [ "$OS" == "linux" ]; 
 	sudo apt-get install exa
 fi
 
@@ -98,7 +98,7 @@ fi
 # Simple, fast, and user-friendly alternative to 'find'
 if [ "$OS" == "mac" ]; then
 	brew install fd
-elif [ "$OS" == "linux" ]
+elif [ "$OS" == "linux" ];
 	sudo apt-get install fd-find
 fi
 
@@ -107,7 +107,7 @@ fi
 if [ "$OS" == "mac" ]; then
 	brew install fzf
 	$(brew --prefix)/opt/fzf/install
-elif [ "$OS" == "linux" ]
+elif [ "$OS" == "linux" ];
 	sudo apt-get install fzf
 fi
 
