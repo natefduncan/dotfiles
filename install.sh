@@ -115,7 +115,7 @@ fi
 # Json parser
 cargo install jless
 
-# CLockify CLI
+# CLOCKIFY
 CLOCKIFY_VERSION=0.32.0
 if [ "$OS" == "mac" ]; then
 	brew install lucassabreu/tap/clockify-cli
@@ -131,3 +131,13 @@ elif [ "$OS" == "linux" ]; then
 	. ~/.bashrc
 
 fi
+
+# SLACK
+SLACK_VERSION=0.5.0
+if [ "$OS" == "mac" ]; then
+	DISTRO=darwin-amd64
+elif [ "$OS" == "linux" ]; then
+	DISTRO=linux-amd64
+fi
+curl -OL "https://github.com/erroneousboat/slack-term/releases/download/v$SLACK_VERSION/slack-term-$DISTRO"
+mv slack-term-$DISTRO /usr/local/bin/slack-term
