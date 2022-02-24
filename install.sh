@@ -117,7 +117,7 @@ cargo install jless
 
 # CLockify CLI
 CLOCKIFY_VERSION=0.32.0
-if [ "$OS" == "mac"]; then
+if [ "$OS" == "mac" ]; then
 	brew install lucassabreu/tap/clockify-cli
 elif [ "$OS" == "linux" ]; then
 	# Download and unzip binary
