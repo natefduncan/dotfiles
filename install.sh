@@ -121,16 +121,16 @@ if [ "$OS" == "mac" ]; then
 	brew install lucassabreu/tap/clockify-cli
 elif [ "$OS" == "linux" ]; then
 	# Download and unzip binary
-	wget "https://github.com/lucassabreu/clockify-cli/releases/downloads/v$CLOCKIFY_VERSION/clockify-cli_${CLOCKIFY_VERSION}_Linux_x86_64.tar.gz"
+	wget "https://github.com/lucassabreu/clockify-cli/releases/download/v$CLOCKIFY_VERSION/clockify-cli_${CLOCKIFY_VERSION}_Linux_x86_64.tar.gz"
 	sudo mkdir -p /usr/local/lib/clockify
-	tar -xJf clockify-cli_$(CLOCKIFY_VERSION)_Linux_x86_64.tar.gz -C /usr/local/clockify
+	tar -xf clockify-cli_$(CLOCKIFY_VERSION)_Linux_x86_64.tar.gz -C /usr/local/clockify
 	rm -rf clockify-cli_$(CLOCKIFY_VERSION)_Linux_x86_64.tar.gz
 
 	# Add to .bashrc
 	echo "export PATH=\"/usr/local/lib/clockify:\$PATH\"" >> ~/.bashrc
 	. ~/.bashrc
-
 fi
+clockify-cli config --init
 
 # SLACK
 SLACK_VERSION=0.5.0
