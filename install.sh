@@ -42,6 +42,7 @@ fi
 # CARGO
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
+cargo install cargo-edit
 
 # GITUI
 cargo install gitui
