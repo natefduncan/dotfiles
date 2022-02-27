@@ -1,6 +1,10 @@
 " Turn on line numbers
 set number
 
+" Tabs to 4 spaces instead of 8
+set tabstop=4
+set shiftwidth=0
+
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
 if v:progname =~? "evim"
