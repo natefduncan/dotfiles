@@ -52,6 +52,10 @@ Plug 'rust-lang/rust.vim'
 " Coc
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
 
+" Vinegar
+" Enhancements to netrw to avoid need for project drawer
+Plug 'tpope/vim-vinegar'
+
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
