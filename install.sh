@@ -29,6 +29,8 @@ if [ "$OS" == "linux" ]; then
 	sudo apt install -y build-essential cmake
 fi
 
+# TODO: Python, Pip3, Virtualenv
+
 # VIM PLUGINS
 vim -c :PlugInstall
 
