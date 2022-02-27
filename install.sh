@@ -107,12 +107,18 @@ fi
 
 # Fzf
 # Fuzzy search
+# Requires RipGrep for Rg and The Silver Searcher for Ag. 
 if [ "$OS" == "mac" ]; then
 	brew install fzf
 	$(brew --prefix)/opt/fzf/install
+	brew install the_silver_searcher
 elif [ "$OS" == "linux" ]; then
-	sudo apt-get install fzf
+	sudo apt-get install -y fzf
+	sudo apt-get install -y silversearcher-ag
 fi
+
+# RipGrep
+cargo install ripgrep
 
 # JLess
 # Json parser
