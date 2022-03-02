@@ -5,6 +5,10 @@ set number
 set tabstop=4
 set shiftwidth=0
 
+" Save the buffer when text is changed
+autocmd TextChanged,TextChangedI * silent write
+
+
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
 if v:progname =~? "evim"
@@ -50,6 +54,9 @@ let mapleader = " "
 
 " Vim-plug
 call plug#begin()
+" Theme
+Plug 'NLKNguyen/papercolor-theme'
+
 " Rust
 Plug 'rust-lang/rust.vim'
 
@@ -88,3 +95,9 @@ syntax enable
 
 " NerdCommenter
 let g:NERDSpaceDelims = 1
+
+" Theme
+set t_Co=256
+set cursorline
+set background=light
+colorscheme PaperColor
