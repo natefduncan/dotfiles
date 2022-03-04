@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# NeoMutt
+if [ "$OS" == "linux" ]; then
+	sudo apt-get install -y neomutt
+	sudo apt-get install -y isync
+	sudo apt-get install -y msmtp
+elif [ "$OS" == "mac" ]; then
+	brew install neomutt
+	brew install isync
+	brew install msmtp
+	brew install pass
+fi
+
