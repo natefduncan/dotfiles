@@ -1,5 +1,4 @@
 #!/bin/bash
-vim -c :PlugInstall
 
 # COC Analyzers
 # Rust
