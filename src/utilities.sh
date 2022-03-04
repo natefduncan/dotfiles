@@ -68,4 +68,30 @@ cargo install ripgrep
 # Json parser
 cargo install jless
 
+# Hyperfine
+# Benchmark terminal commands
+if [ "$OS" == "mac" ]; then
+	brew install hyperfine
+elif [ "$OS" == "linux" ]; then
+	cargo install hyperfine
+fi
 
+# Stack Overflow
+# Query SO from command line
+if [ "$OS" == "mac" ]; then
+	brew install so
+elif [ "$OS" == "linux"]; then
+	cargo install so
+fi
+
+# Terminalizer
+# Record terminal sessions
+npm install -g terminalizer
+
+# Viu
+# View images in terminal
+if [ "$OS" == "mac" ]; then
+	brew install viu
+elif [ "$OS" == "linux" ]; then
+	cargo install viu
+fi
