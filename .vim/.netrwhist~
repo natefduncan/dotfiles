@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/Users/User/.vim/pack/plugins/start/rust.vim'
-let g:netrw_dirhist_1='/Users/User/.vim/plugin/rust.vim'
