@@ -8,6 +8,7 @@ set shiftwidth=0
 " Save backup files in ~/.vim/tmp
 set backupdir=~/.vim/tmp//,.
 set directory=~/.vim/tmp//,.
+set backup
 
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.

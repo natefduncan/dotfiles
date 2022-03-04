@@ -1,4 +1,4 @@
-.install.sh.un~
-install.sh~
-.install.sh.swp
-.install.sh.swo
+*.sh.un~
+*.sh
+*.swp
+*.swo
