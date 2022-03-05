@@ -6,9 +6,9 @@ set tabstop=4
 set shiftwidth=0
 
 " Save backup files in ~/.vim/tmp
-set backupdir=~/.vim/tmp//,.
-set directory=~/.vim/tmp//,.
-set undodir=~/.vim/tmp//,.
+set backupdir=~/.vim/tmp/,/tmp//
+set directory=~/.vim/tmp/,/tmp//
+set undodir=~/.vim/tmp/,/tmp//
 set backup
 set undofile
 
