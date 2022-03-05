@@ -8,7 +8,9 @@ set shiftwidth=0
 " Save backup files in ~/.vim/tmp
 set backupdir=~/.vim/tmp//,.
 set directory=~/.vim/tmp//,.
+set undodir=~/.vim/tmp//,.
 set backup
+set undofile
 
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.

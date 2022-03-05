@@ -7,6 +7,9 @@
 # LANGUAGES
 ./src/languages.sh
 
+# VIM PLUGINS
+./src/vim_plugins.sh
+
 # GITHUB
 ./src/github.sh
 
