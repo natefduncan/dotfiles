@@ -12,6 +12,15 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	DISTRO="linux-x64"
 fi
 
+# PYTHON
+if [ "$OS" == "mac" ]; then
+	brew install python
+elif [ "$OS" == "linux" ]; then
+	sudo apt-get install python3.8
+	sudo apt-get install python3-pip
+fi
+pip install virtualenv
+
 # RUST (CARGO)
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
