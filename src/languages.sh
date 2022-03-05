@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# TODO: Python, Pip3, Virtualenv
-# TODO: R & language server
-
 # Set Variables
 if [ "$(uname)" == "Darwin" ]; then
 	OS="mac"
@@ -16,10 +13,19 @@ fi
 if [ "$OS" == "mac" ]; then
 	brew install python
 elif [ "$OS" == "linux" ]; then
-	sudo apt-get install python3.8
-	sudo apt-get install python3-pip
+	sudo apt-get install -y python3.8
+	sudo apt-get install -y python3-pip
 fi
 pip install virtualenv
+
+# R
+if [ "$OS" == "mac" ]; then
+	brew install r
+elif [ "$OS" == "linux" ]; then
+	sudo apt-get install -y r-base rbase-dev
+fi
+R -e "install.packages('languageserver', repos='https://cran.rstudio.com')"
+
 
 # RUST (CARGO)
 curl https://sh.rustup.rs -sSf | sh
