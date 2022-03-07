@@ -19,7 +19,7 @@ rm -rf mutt-wizard
 # NeoMutt
 if [ "$OS" == "linux" ]; then
 	# Required
-	sudo apt-get install -y neomutt isync msmtp
+	sudo apt-get install -y neomutt isync msmtp 
 	# Optional
 	sudo apt-get install -y lynx notmuch abook
 elif [ "$OS" == "mac" ]; then
@@ -28,4 +28,7 @@ elif [ "$OS" == "mac" ]; then
 	# Options
 	brew install lynx notmuch abook
 fi
-
+# gpg --full-gen-key
+# pass init EMAIL_ADDRESS 
+# Enable IMAP forwarding 
+# App Password
