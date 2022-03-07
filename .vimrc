@@ -102,7 +102,7 @@ Plug 'danro/rename.vim'
 
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'jalvesaq/Nvim-R' {'branch' : 'stable'}
+Plug 'jalvesaq/Nvim-R', {'branch' : 'stable'}
 
 call plug#end()
 
