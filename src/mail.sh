@@ -9,15 +9,23 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	DISTRO="linux-x64"
 fi
 
+# Mutt-Wizard
+git clone https://github.com/lukesmithxyz/mutt-wizard
+cd mutt-wizard
+sudo make install
+cd ..
+rm -rf mutt-wizard
+
 # NeoMutt
 if [ "$OS" == "linux" ]; then
-	sudo apt-get install -y neomutt
-	sudo apt-get install -y isync
-	sudo apt-get install -y msmtp
+	# Required
+	sudo apt-get install -y neomutt isync msmtp
+	# Optional
+	sudo apt-get install -y lynx notmuch abook
 elif [ "$OS" == "mac" ]; then
-	brew install neomutt
-	brew install isync
-	brew install msmtp
-	brew install pass
+	# Required
+	brew install neomutt isync msmtp pass
+	# Options
+	brew install lynx notmuch abook
 fi
 
