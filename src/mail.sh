@@ -11,10 +11,9 @@ fi
 
 # Mutt-Wizard
 git clone https://github.com/lukesmithxyz/mutt-wizard
-cd mutt-wizard
+sudo mv mutt-wizard/ /usr/local/src/
+cd /usr/local/src/mutt-wizard
 sudo make install
-cd ..
-rm -rf mutt-wizard
 
 # NeoMutt
 if [ "$OS" == "linux" ]; then
