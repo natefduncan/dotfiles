@@ -3,9 +3,6 @@
 # Get OS and DISTRO
 source ./src/os.sh;
 
-# GitUi
-cargo install gitui
-
 # GitHub CLI
 if [ "$OS" == "mac" ]; then
 	brew install gh

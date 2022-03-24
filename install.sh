@@ -10,8 +10,11 @@
 # VIM PLUGINS
 ./src/vim_plugins.sh
 
+# CALENDAR
+./src/calendar/all.sh
+
 # GITHUB
-./src/github.sh
+./src/github/all.sh
 
 # UTILITIES
 ./src/utilities.sh
