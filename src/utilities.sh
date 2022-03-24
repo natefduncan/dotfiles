@@ -59,6 +59,9 @@ cargo install ripgrep
 
 # JLess
 # Json parser
+if [ "$OS" == "linux" ]; then
+	sudo apt-get install -y libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev
+fi
 cargo install jless
 
 # Hyperfine
