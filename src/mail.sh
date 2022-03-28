@@ -25,3 +25,6 @@ fi
 # pass init EMAIL_ADDRESS 
 # Enable IMAP forwarding 
 # App Password
+
+# Change editor to vim
+echo "set editor = \"vim +':set textwidth=0'\"" >> ~/.config/mutt/muttrc
