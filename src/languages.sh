@@ -16,9 +16,16 @@ pip install virtualenv
 if [ "$OS" == "mac" ]; then
 	brew install r
 elif [ "$OS" == "linux" ]; then
-	sudo apt-get install -y r-base rbase-dev
+	R_VERSION=4.1.3
+	sudo apt-get install libcurl4-openssl-dev libssl-dev libxml2-dev r-base
+	curl -O "https://cran.r-project.org/src/base/R-4/R-$R_VERSION.tar.gz"
+	sudo tar -xvf R-$R_VERSION.tar.gz -C /usr/local/lib/R
+	rm -rf R-$R_VERSION.tar.gz
+	cd /usr/local/lib/R
+	./configure --with-x=no
+	echo "export PATH=\"/usr/local/lib/R-$R_VERSION/bin:\$PATH:\"" >> ~/.bashrc
 fi
-R -e "install.packages('languageserver', repos='https://cran.rstudio.com')"
+R -e "install.packages('languageserver', repos='https://cran.rstudio.com', dependencies=TRUE)"
 
 
 # RUST (CARGO)

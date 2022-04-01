@@ -2,20 +2,10 @@
 
 source ./src/os.sh;
 
-# SLACK
-SLACK_VERSION=0.5.0
-if [ "$OS" == "mac" ]; then
-	DISTRO=darwin-amd64
-elif [ "$OS" == "linux" ]; then
-	DISTRO=linux-amd64
+if [ $OS == 'linux' ]; then
+	sudo apt-get install weechat-python python3-websocket
 fi
-curl -OL "https://github.com/erroneousboat/slack-term/releases/download/v$SLACK_VERSION/slack-term-$DISTRO"
-
-mv slack-term-$DISTRO /usr/local/bin/slack-term
-# Add slack token to config file 
-# { "slack_token" : "TOKEN" }
-# at ~/.config/slack-term/configss
-mkdir -p ~/.config/slack-term
-echo "Input slack token"
-read slack_token
-echo "{ \"slack_token\":\"${slack_token}\"}" >> ~/.slack-term
+mkdir -p ~/.weechat/python/autoload
+cd ~/.weechat/python
+curl -O https://raw.githubusercontent.com/wee-slack/wee-slack/master/wee_slack.py
+ln -s ../wee_slack.py autoload
