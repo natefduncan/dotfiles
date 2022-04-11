@@ -20,6 +20,12 @@ elif [ "$OS" == "mac" ]; then
 	# Options
 	brew install lynx notmuch abook
 fi
+
+# Make sure you have a gpg key pair
+# gpg --full-gen-key
+# pass init your@gpgemail.com
+
+
 # Optional pam-gnupg
 # gpg --full-gen-key
 # pass init EMAIL_ADDRESS 
@@ -28,3 +34,8 @@ fi
 
 # Change editor to vim
 echo "set editor = \"vim +':set textwidth=0'\"" >> ~/.config/mutt/muttrc
+
+# Set up GPG Agent
+sudo echo "auth optional pam_gnupg.so store-only" >> /etc/pam.d/login
+sudo echo "session optional pam_gnupg.so" >> /etc/pam.d/login
+
