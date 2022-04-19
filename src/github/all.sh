@@ -1,5 +1,5 @@
 # Github CLI
-./src/github/gh.sh
+sudo bash ./src/github/gh.sh
 
 # Gitui
-./src/github/gitui.sh
+bash ./src/github/gitui.sh

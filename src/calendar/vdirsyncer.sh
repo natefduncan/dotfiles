@@ -7,9 +7,9 @@
 # no way to get an auth code for token swapping.
 
 # Vdirsyncer
-mkdir ~/.vdirsyncer
-sudo mkdir /usr/local/lib/vdirsyncer
-virtualenv /usr/local/lib/vdirsyncer/venv
-sudo /usr/local/lib/vdirsyncer/bin/pip install vdirsyncer[google]
+mkdir -p ~/.vdirsyncer
+sudo mkdir -p /usr/local/lib/vdirsyncer
+sudo virtualenv /usr/local/lib/vdirsyncer/venv
+sudo /usr/local/lib/vdirsyncer/venv/bin/pip install vdirsyncer[google]
 echo "alias vdirsyncer=\"/usr/local/lib/vdirsyncer/venv/bin/vdirsyncer\"" >> ~/.bashrc
-
+. ~/.bashrc
