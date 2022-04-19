@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./src/os.sh;
+source ./src/system/os.sh;
 
 # Mutt-Wizard
 git clone https://github.com/lukesmithxyz/mutt-wizard
@@ -13,7 +13,7 @@ if [ "$OS" == "linux" ]; then
 	# Required
 	sudo apt-get install -y neomutt isync msmtp 
 	# Optional
-	sudo apt-get install -y lynx notmuch abook urlview 
+	sudo apt-get install -y lynx notmuch abook urlview pass
 elif [ "$OS" == "mac" ]; then
 	# Required
 	brew install neomutt isync msmtp pass
@@ -31,6 +31,11 @@ fi
 # pass init EMAIL_ADDRESS 
 # Enable IMAP forwarding 
 # App Password
+
+# MW Usage
+# mw -a <EMAIL> -n <FULL NAME>
+# imap.gmail.com
+# smtp.gmail.com
 
 # Change editor to vim
 echo "set editor = \"vim +':set textwidth=0'\"" >> ~/.config/mutt/muttrc
