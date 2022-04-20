@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./src/os.sh;
+source ./src/system/os.sh;
 
 if [ $OS == 'linux' ]; then
 	sudo apt-get install weechat-python python3-websocket

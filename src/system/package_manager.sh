@@ -1,6 +1,6 @@
 # Set Variables
 
-source ./src/os.sh;
+source ./src/system/os.sh;
 
 # Build Tools (linux)
 if [ "$OS" == "linux" ]; then
