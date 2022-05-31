@@ -104,6 +104,9 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'jalvesaq/Nvim-R', {'branch' : 'stable'}
 
+"Python code folder
+Plug 'tmhedberg/SimpylFold'
+
 call plug#end()
 
 
