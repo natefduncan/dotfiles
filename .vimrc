@@ -1,3 +1,7 @@
+" Keyboard shortcuts
+nnoremap <C-p> :Files <CR>
+nnoremap <C-f> :Ag <CR>
+
 " Turn on line numbers
 set number
 
