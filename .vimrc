@@ -51,6 +51,9 @@ Plug 'junegunn/goyo.vim'
 " Markdown preview
 Plug 'iamcco/markdown-preview.vim'
 
+" Markdown tools
+Plug 'SidOfc/mkdx'
+
 " Fix Vim clipboard problem
 Plug 'christoomey/vim-system-copy'
 
