@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./src/os.sh;
+source ./src/system/os.sh;
 
 # TMUX
 if [ "$OS" == "mac" ]; then

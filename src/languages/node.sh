@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get OS and DISTRO
-source ./src/os.sh;
+source ./src/system/os.sh;
 
 NODE_VERSION=v16.14.0
 
