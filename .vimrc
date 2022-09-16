@@ -12,23 +12,12 @@ set undodir=~/.vim/tmp/,/tmp//
 set backup
 set undofile
 
-" When started as "evim", evim.vim will already have done these settings, bail
-" out.
-if v:progname =~? "evim"
-  finish
-endif
+" Keyboard shortcuts
+nnoremap <C-p> :Files<CR>
+nnoremap <C-f> :Rg<CR>
 
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
-
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file (restore to previous version)
-  if has('persistent_undo')
-    set undofile	" keep an undo file (undo changes after closing)
-  endif
-endif
 
 if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
@@ -104,6 +93,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'jalvesaq/Nvim-R', {'branch' : 'stable'}
 
+Plug 'vimwiki/vimwiki'
+
 call plug#end()
 
 
@@ -118,3 +109,9 @@ set t_Co=256
 set cursorline
 set background=light
 colorscheme PaperColor
+
+" VimWiki
+set nocompatible
+syntax on
+filetype plugin on 
+let g:vimwiki_list = [{'path': '~/Share/Nate/church/come_follow_me','syntax': 'markdown', 'ext': '.md'}]
